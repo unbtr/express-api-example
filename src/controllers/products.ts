@@ -1,4 +1,3 @@
-import { create } from 'domain';
 import { RequestHandler } from 'express';
 
 export const index: RequestHandler = (req, res, next) => {
