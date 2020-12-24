@@ -10,5 +10,5 @@ export const store: RequestHandler = (req, res, next) => {
 
 export const update: RequestHandler<{ id: string }> = (req, res, next) => {
   const id = req.params.id;
-  res.json({ message: '更新しました' });
+  res.json({ message: 'updated' });
 };
