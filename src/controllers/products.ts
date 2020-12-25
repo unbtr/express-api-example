@@ -8,7 +8,14 @@ export const store: RequestHandler = (req, res, next) => {
   return res.json({ value: 'create' });
 };
 
-export const update: RequestHandler<{ id: string }> = (req, res, next) => {
-  const id = req.params.id;
+export const update: RequestHandler<{ product: string }> = (req, res, next) => {
   res.json({ message: 'updated' });
+};
+
+export const destroy: RequestHandler<{ product: string }> = (
+  req,
+  res,
+  next
+) => {
+  return res.json({ message: 'delete' });
 };
