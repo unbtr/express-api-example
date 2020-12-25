@@ -7,7 +7,7 @@ router.get('/', index);
 
 router.post('/', store);
 
-router.put('/:product', update);
+router.patch('/:product', update);
 
 router.delete('/:product', destroy);
 
