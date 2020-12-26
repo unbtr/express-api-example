@@ -1,4 +1,5 @@
 import { RequestHandler } from 'express';
+import Product from '../models/product';
 
 export const index: RequestHandler = (req, res, next) => {
   return res.json({ value: 'products' });
