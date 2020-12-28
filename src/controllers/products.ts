@@ -13,10 +13,6 @@ export const update: RequestHandler<{ product: string }> = (req, res, next) => {
   res.json({ message: 'updated' });
 };
 
-export const destroy: RequestHandler<{ product: string }> = (
-  req,
-  res,
-  next
-) => {
+export const destroy: RequestHandler = (req, res, next) => {
   return res.json({ message: 'delete' });
 };
