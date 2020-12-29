@@ -1,7 +1,7 @@
 import { RequestHandler } from 'express';
 import Product from '../models/product';
 
-let index = 1;
+const currentID = 1;
 const products: Product[] = [];
 
 export const index: RequestHandler = (req, res, next) => {
