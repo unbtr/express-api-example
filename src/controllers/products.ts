@@ -18,5 +18,5 @@ export const update: RequestHandler<{ product: string }> = (req, res, next) => {
 };
 
 export const destroy: RequestHandler = (req, res, next) => {
-  return res.json({ message: 'delete' });
+  res.json({ message: 'deleted' });
 };
