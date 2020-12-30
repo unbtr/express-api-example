@@ -4,12 +4,13 @@ import Product from '../models/product';
 const currentID = 1;
 const products: Product[] = [];
 
-export const index: RequestHandler = (req, res, next) => {
-  return res.json({ value: 'products', products });
-};
+export const index: RequestHandler = (req, res, next) => res.json({ products });
 
 export const store: RequestHandler = (req, res, next) => {
-  return res.json({ value: 'create' });
+  const name = (req.body as { name: string }).name;
+  const price = (req.body as { price: number }).price;
+  const product = new Product(currentID, name, price);
+  res.json({ message: 'created', product });
 };
 
 export const update: RequestHandler<{ product: string }> = (req, res, next) => {
