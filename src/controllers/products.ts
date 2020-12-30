@@ -4,7 +4,7 @@ import Product from '../models/product';
 const currentID = 1;
 const products: Product[] = [];
 
-export const index: RequestHandler = (req, res, next) => res.json({ products });
+export const list: RequestHandler = (req, res, next) => res.json({ products });
 
 export const store: RequestHandler = (req, res, next) => {
   const name = (req.body as { name: string }).name;
